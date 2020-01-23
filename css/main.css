@@ -64,6 +64,21 @@ a:hover {
   color: var(--primary-dark);
 }
 
+.link-underlined {
+  margin: 0;
+  position: relative;
+}
+
+.link-underlined::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+
 .btn-fill {
   padding: 1.5rem 3.2rem;
   background-color: var(--primary);
@@ -117,6 +132,14 @@ header .logo {
     font-size: 1.8rem;
     margin: 0 0.5rem;
   }
+}
+
+header.header-reverse {
+  background-color: var(--primary);
+}
+
+.header-reverse a:not(.btn-fill) {
+  color: white;
 }
 
 /* -----Hero----- */
@@ -411,13 +434,139 @@ header .logo {
 
 .footer h2 {
   font-weight: 400;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   color: var(--text-primary);
   padding-bottom: 1rem;
 }
 
-.footer span {
-  color: var(--primary);
-  font-weight: bold;
+.footer a {
+  margin: 0;
+}
+
+/* -----Form----- */
+
+.form-container {
+  position: relative;
+  min-height: calc(100vh - 10rem);
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form {
+  width: 80%;
+  max-width: 600px;
+  padding: 8rem 10rem;
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  text-align: center;
+}
+
+form h2 {
+  color: var(--text-primary);
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+form input {
+  border: none;
+  background-color: #eef3fb;
+  font-family: inherit;
+  padding: 0 1rem;
+  height: 6rem;
+  width: 100%;
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  border-radius: 5px;
+}
+
+form input:focus {
+  background: white;
+  border: 1px solid var(--primary);
+} 
+
+form input::placeholder {
+  color: var(--text-secondary);
+}
+
+form button[type="submit"] {
+  width: 100%;
+  height: 6rem;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 700;
   cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+form .or {
+  width: 95%;
+  height: 2px;
+  background-color: var(--text-secondary);
+  text-align: center;
+  margin: 2.5rem auto;
+}
+
+form .or::after {
+  content: "or";
+  width: 30px;
+  background-color: white;
+  color: var(--text-secondary);
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  transform: translateY(-50%);
+}
+
+form .alternative {
+  width: 100%;
+  display: block;
+  margin: 1rem 0;
+  height: 6rem;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form .alternative img {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  height: 80%;
+  transform: translateY(-50%);
+}
+
+form .alternative-google {
+  background-color: #4285f4;
+}
+
+form .alternative-facebook {
+  background-color: #2d5c98;
+}
+
+form p {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .form-container form {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .form-container {
+    min-height: auto;
+  }
 }
