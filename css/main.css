@@ -60,6 +60,12 @@ a {
   user-select: none;
 }
 
+a.disable-default {
+  margin: 0;
+  display: inline;
+  font-size: 1.6rem;
+}
+
 a:hover {
   color: var(--primary-dark);
 }
@@ -119,8 +125,12 @@ header {
   padding: 2rem;
 }
 
-header .logo {
+header .disable-default {
   height: 80%;
+}
+
+header img {
+  height: 100%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -321,7 +331,7 @@ header.header-reverse {
   margin-bottom: 2rem;
 }
 
-.newsletter form {
+.newsletter .form {
   width: 90%;
   height: 55px;
   background-color: white;
@@ -369,7 +379,7 @@ header.header-reverse {
   .newsletter input {
     width: calc(100% - 10rem);
   }
-  .newsletter form {
+  .newsletter .form {
     height: 40px;
   }
   .newsletter {
@@ -456,8 +466,8 @@ header.header-reverse {
 
 .form-container form {
   width: 80%;
-  max-width: 600px;
-  padding: 8rem 10rem;
+  max-width: 550px;
+  padding: 8rem 9rem;
   background-color: white;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
   border-radius: 15px;

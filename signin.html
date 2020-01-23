@@ -10,7 +10,9 @@
   </head>
   <body>
     <header class="header-reverse">
-      <img src="assets/logo-white.svg" alt="Confetti" class="logo" />
+      <a href="index.html" class="disable-default">
+        <img src="assets/logo-white.svg" alt="Confetti" class="logo" />
+      </a>
       <div class="cab">
         <a href="signin.html">Sign In</a>
         <a href="signup.html" class="btn-fill btn-reverse">Try for Free</a>
@@ -20,22 +22,28 @@
     <div class="form-container">
       <form>
         <h2>Welcome back!</h2>
-        <input type="email" placeholder="Email" name="email" id="email">
-        <input type="password" placeholder="Password" name="password" id="password">
+        <input type="email" placeholder="Email" name="email" id="email" />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+        />
         <button type="submit">Sign In</button>
         <a href="#">Forgot your password?</a>
         <div class="or"></div>
         <button class="alternative alternative-google">
-          <img src="assets/google.svg" alt="">
+          <img src="assets/google.svg" alt="" />
           Sign In with Google
         </button>
         <button class="alternative alternative-facebook">
-          <img src="assets/facebook.svg" alt="">
+          <img src="assets/facebook.svg" alt="" />
           Sign In with Facebook
         </button>
 
         <p>
-          Don't have an account? <a href="signup.html" class="link-underlined">Sign Up</a>
+          Don't have an account?
+          <a href="signup.html" class="link-underlined">Sign Up</a>
         </p>
       </form>
     </div>
